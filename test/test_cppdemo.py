@@ -1,4 +1,4 @@
-""" Test suite for the cppdemo library template.
+""" Test suite for the cppdemo library.
 
 The script can be executed on its own or incorporated into a larger test suite.
 However the tests are run, be aware of which version of the package is actually
@@ -9,13 +9,14 @@ environment or setuptools develop mode to test against the development version.
 """
 import pytest
 
+from cppdemo import *
 
-def test_version():
-    """ Test the library version.
+
+def test_pyello():
+    """ Test the pyhello() function.
 
     """
-    from cppdemo import __version__
-    assert __version__ == "0.1.0.dev0"
+    assert pyhello() == "Python says, 'Hello.'"
     return
 
 
