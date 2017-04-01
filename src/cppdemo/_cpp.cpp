@@ -21,7 +21,7 @@
 #endif
 
 #include "_cpplib.hpp"
-
+#include <string>
 
 
 /// Define module-level functions.
@@ -213,13 +213,14 @@ PyMODINIT_FUNC init_cpp()
         {"hello", hello, METH_VARARGS, "Return a greeting."},
         {nullptr, nullptr, 0, nullptr}  // sentinel
     };
-    Py_InitModule3("_cpp", methods, "C++ extension demo.");
+    if (PyType_Ready(&GreetingType) < 0) {
+        return;
+    }
     PyObject* module(Py_InitModule3("_cpp", methods, "C++ extension demo."));
     if (!module) {
         return;
     }
-    // FIXME: Adding Greeting object causes a segfault.
-    //Py_INCREF(&GreetingType);
-    //PyModule_AddObject(module, "Greeting", (PyObject*)&GreetingType);
+    Py_INCREF(&GreetingType);
+    PyModule_AddObject(module, "Greeting", (PyObject*)&GreetingType);
     return;
 }

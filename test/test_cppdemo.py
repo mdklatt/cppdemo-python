@@ -28,6 +28,20 @@ def test_cpphello():
     return
 
 
+class CppGreetingTest(object):
+    """ Test suite for the CppGreeting class.
+    
+    """
+    def test_hello(self):
+        """ Test the hello() method.
+        
+        """
+        name = "CppGreetingTest"
+        greeting = CppGreeting(name)
+        assert greeting.hello() == "Greetings from C++, {:s}!".format(name)
+        return
+
+
 # Make the module executable.
 
 if __name__ == "__main__":
