@@ -8,4 +8,4 @@ def hello():
     """ Return a greeting.
     
     """
-    return "Python says, 'Hello.'"
+    return "Greetings from Python!"

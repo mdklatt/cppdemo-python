@@ -1,31 +1,25 @@
-# Python
+# Ignore Python build artifacts.
 
 MANIFEST
-build/
-dist/
 *.egg-info/
 *.pyc
 *.pyo
 
 
-# Sphinx
-
-_build/
-_static/
-_templates/
-
-
-# virtualenv
+# Ignore virtualenv environments.
 
 venv*/
 
 
-# Vagrant
+# Ignore C++ build artifacts.
 
-.vagrant/
+*.o
+*.a
+*.so
+*.dll
 
 
-# IDE settings
+# Ignore settings for various IDEs.
 
 .idea/
 .project/
@@ -33,6 +27,6 @@ venv*/
 nbproject/
 
 
-# OS-specific
+# Ignore OS metadata files.
 
 .DS_Store

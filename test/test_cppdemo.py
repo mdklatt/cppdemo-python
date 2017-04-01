@@ -12,11 +12,19 @@ import pytest
 from cppdemo import *
 
 
-def test_pyello():
+def test_pyhello():
     """ Test the pyhello() function.
 
     """
-    assert pyhello() == "Python says, 'Hello.'"
+    assert pyhello() == "Greetings from Python!"
+    return
+
+
+def test_cpphello():
+    """ Test the cpphello() function.
+
+    """
+    assert cpphello() == "Greetings from C++!"
     return
 
 

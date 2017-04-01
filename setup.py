@@ -2,6 +2,7 @@
 
 """
 from setuptools import Command
+from setuptools import Extension
 from setuptools import find_packages
 from setuptools import setup
 from distutils import log
@@ -10,13 +11,25 @@ from subprocess import check_call
 from subprocess import CalledProcessError
 
 
+_CPPEXT = {
+    # Define the parameters needed to build the extension using the appropriate
+    # compiler via the build_ext command.
+    # https://docs.python.org/2/distutils/apiref.html#distutils.core.Extension
+    "name": "cppdemo._cpp",  # fully-qualified Python module name
+    "language": "c++",
+    "sources": ["src/cppdemo/_cpp.cpp"],
+}
+
+
 _CONFIG = {
     "name": "cppdemo",
     "author": "Michael Klatt",
     "author_email": "mdklatt@alumni.ou.edu",
     "url": "",
     "package_dir": {"": "src"},
-    "packages": find_packages("src")}
+    "packages": find_packages("src"),
+    "ext_modules": [Extension(**_CPPEXT)],
+}
 
 
 def version():
