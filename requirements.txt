@@ -1,0 +1,4 @@
+## Python requirements for using the cppdemo library. 
+##
+##    pip install --requirement=requirements.txt
+##
