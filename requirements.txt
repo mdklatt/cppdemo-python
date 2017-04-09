@@ -1,4 +1,4 @@
-## Python requirements for using the cppdemo library. 
+## Python requirements for using the cppext library.
 ##
 ##    pip install --requirement=requirements.txt
 ##

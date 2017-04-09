@@ -1,4 +1,4 @@
-""" Test suite for the cppdemo library.
+""" Test suite for the cppext library.
 
 The script can be executed on its own or incorporated into a larger test suite.
 However the tests are run, be aware of which version of the package is actually
@@ -9,7 +9,7 @@ environment or setuptools develop mode to test against the development version.
 """
 import pytest
 
-from cppdemo import *
+from cppext import *
 
 
 def test_pyhello():

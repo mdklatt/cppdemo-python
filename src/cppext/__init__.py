@@ -1,4 +1,4 @@
-""" Package for the cppdemo library.
+""" Package for the cppext library.
 
 """
 from __future__ import absolute_import

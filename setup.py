@@ -1,4 +1,4 @@
-""" Setup script for the cppdemo library.
+""" Setup script for the cppext library.
 
 """
 from setuptools import Command
@@ -15,14 +15,14 @@ _CPPEXT = {
     # Define the parameters needed to build the extension using the appropriate
     # compiler via the build_ext command.
     # https://docs.python.org/2/distutils/apiref.html#distutils.core.Extension
-    "name": "cppdemo._cpp",  # fully-qualified Python module name
+    "name": "cppext._cpp",  # fully-qualified Python module name
     "language": "c++",
-    "sources": ["src/cppdemo/_cpp.cpp"],
+    "sources": ["src/cppext/_cpp.cpp"],
 }
 
 
 _CONFIG = {
-    "name": "cppdemo",
+    "name": "cppext",
     "author": "Michael Klatt",
     "author_email": "mdklatt@alumni.ou.edu",
     "url": "",

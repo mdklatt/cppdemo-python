@@ -1,4 +1,4 @@
-""" Current version of the cppdemo library.
+""" Current version of the cppext library.
 
 This project uses the Semantic Versioning scheme in conjunction with PEP 0440:
 
@@ -14,4 +14,4 @@ Version 0.x should be considered a development version with an unstable API,
 and backwards compatibility is not guaranteed for minor versions.
 
 """
-__version__ = "0.1.0.dev3"
+__version__ = "0.1.0.dev4"
