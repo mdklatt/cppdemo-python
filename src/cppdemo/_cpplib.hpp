@@ -1,4 +1,3 @@
-
 /// A library that needs a Python interface.
 ///
 /// This is regular C++ code that will be exported via the Python C API. In a

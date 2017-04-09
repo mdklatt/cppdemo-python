@@ -1,30 +1,31 @@
-Overview
-========
+======
+cppext
+======
 
-This is a demonstration of writing a C++ extension for Python.
-
-
-Minimum Requirements
-====================
-
-* Python 2.7
+This is a demonstration project for creating a C++ extension for Python 2.7.
 
 
-Optional Requirements
-=====================
+Install the development version of the library in a virtualenv environment:
 
-* `py.test`_ 3.0 (for running the test suite)
-* `Sphinx`_ 1.3 (for generating documentation)
+..  code-block::
+
+    $ virtualenv venv
+    $ venv/bin/pip install -r requirements.txt -r test/requirements.txt -e .
 
 
-Basic Setup
-===========
+Build the C++ extension:
+
+..  code-block::
+   
+    $ python setup.py build_ext --inplace
+
 
 Run the test suite:
 
 ..  code-block::
-   
-    $ py.test test/
+
+    $ venv/bin/pytest test/
+
 
 Build documentation:
 
@@ -32,13 +33,3 @@ Build documentation:
 
     $ cd doc
     $ make html
-
-Install for the current user:
-
-..  code-block::
-
-    $ python setup.py install --user
-
-
-..  _py.test: http://pytest.org
-..  _Sphinx: http://sphinx-doc.org
