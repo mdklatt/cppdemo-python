@@ -18,6 +18,7 @@ _CPPEXT = {
     "name": "cppext._cpp",  # fully-qualified Python module name
     "language": "c++",
     "sources": ["src/cppext/_cpp.cpp"],
+    "extra_compile_args": ["-std=c++11"],
 }
 
 

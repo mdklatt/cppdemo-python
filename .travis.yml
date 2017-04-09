@@ -1,0 +1,21 @@
+## Travis CI configuration for the cppext library.
+##
+##   <https://travis-ci.org/mdklatt/serial-python>
+##
+language: python
+
+python:
+  - "2.7"
+
+branches:
+  only:
+    - master
+    - dev
+
+dist: trusty  # need C++11
+
+install:
+  - pip install -r requirements.txt -r test/requirements.txt .
+
+script:
+  - pytest --verbose test/

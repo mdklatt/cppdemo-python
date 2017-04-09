@@ -13,13 +13,6 @@ Install the development version of the library in a virtualenv environment:
     $ venv/bin/pip install -r requirements.txt -r test/requirements.txt -e .
 
 
-Build the C++ extension:
-
-..  code-block::
-   
-    $ python setup.py build_ext --inplace
-
-
 Run the test suite:
 
 ..  code-block::
@@ -33,3 +26,10 @@ Build documentation:
 
     $ cd doc
     $ make html
+
+
+Rebuild the C++ extension:
+
+..  code-block::
+
+    $ python setup.py build_ext --inplace
